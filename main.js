@@ -17,10 +17,13 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++){
     }
 
     /* ---Ativando o click das teclas utilizando o teclado--- */
-    tecla.onkeydown = function() {
+    tecla.onkeydown = function () {
         tecla.classList.add('ativa');
     }
 
-    console.log(contador);
+    /* ---Desativando o click das teclas utilizando o teclado--- */
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa');
+    }
 }
 
