@@ -17,8 +17,14 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++){
     }
 
     /* ---Ativando o click das teclas utilizando o teclado--- */
-    tecla.onkeydown = function () {
+    tecla.onkeydown = function (evento) {
+
+        console.log (evento.code == 'Space')
+
+        if (evento.code == 'Space'){
         tecla.classList.add('ativa');
+        }
+        
     }
 
     /* ---Desativando o click das teclas utilizando o teclado--- */
